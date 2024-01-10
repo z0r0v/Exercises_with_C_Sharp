@@ -22,8 +22,10 @@ class Book
 
         Console.Write("Send title: ");
         string userTitle = Console.ReadLine();
+
         Console.Write("Send author: ");
         string userAuthor = Console.ReadLine();
+
         Console.Write("Send content: ");
         string userContent = Console.ReadLine();
 

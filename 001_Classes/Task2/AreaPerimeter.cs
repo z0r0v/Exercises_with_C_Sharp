@@ -39,8 +39,10 @@ class AreaPerimeter
             area = new Rectangle(side1ConvertToDoble, side2ConvertToDoble).Area;
             perimeter = new Rectangle(side1ConvertToDoble, side2ConvertToDoble).Perimeter;
 
-            Console.WriteLine("Area: " + area);
+            Console.Write("Area: " + area);
+            Console.Write("; ");
             Console.WriteLine("Perimeter: " + perimeter);
+            Console.Write("; ");
             return;
         }
 

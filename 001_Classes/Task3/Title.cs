@@ -20,7 +20,7 @@ class Title
         Console.Write("Title: ");
         Console.ForegroundColor = ConsoleColor.Green;
         Console.Write(StringFieldTitle);
-        Console.Write(" ");
         Console.ResetColor();
+        Console.Write("; ");
     }
 }

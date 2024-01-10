@@ -21,7 +21,7 @@ class Content
         Console.Write("Content: ");
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.Write(StringFieldContent);
-        Console.Write(" ");
         Console.ResetColor();
+        Console.Write("; ");
     }
 }

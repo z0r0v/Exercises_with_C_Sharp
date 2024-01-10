@@ -21,7 +21,7 @@ class Author
         Console.Write("Author: ");
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.Write(StringFieldAuthor);
-        Console.Write(" ");
         Console.ResetColor();
+        Console.Write("; ");
     }
 }
