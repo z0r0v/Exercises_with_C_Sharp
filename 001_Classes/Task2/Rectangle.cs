@@ -7,18 +7,12 @@ public class Rectangle(double side1, double side2)
 
     public double Area
     {
-        get
-        {
-            return AreaCalculator();
-        }
+        get => AreaCalculator();
     }
 
     public double Perimeter
     {
-        get
-        {
-            return PerimeterCalculator();
-        }
+        get => PerimeterCalculator();
     }
 
     private double AreaCalculator()

@@ -1,26 +1,18 @@
 namespace Classes001;
 class Title
 {
-    private string? title;
+    private string title = "Have not value";
 
     public string StringFieldTitle
     {
-        get
-        {
-            return !String.IsNullOrWhiteSpace(title) ? title : "Have not value";
-        }
-        set
-        {
-            title = value;
-        }
+        get => title;
+        set => title = value;
     }
 
     public void Show()
     {
-        Console.Write("Title: ");
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.Write(StringFieldTitle);
+        Console.Write("Title: " + StringFieldTitle + "; ");
         Console.ResetColor();
-        Console.Write("; ");
     }
 }

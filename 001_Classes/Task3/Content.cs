@@ -2,26 +2,18 @@ namespace Classes001;
 
 class Content
 {
-    private string? content;
+    private string content = "Have not value";
 
     public string StringFieldContent
     {
-        get
-        {
-            return !String.IsNullOrWhiteSpace(content) ? content : "Have not value";
-        }
-        set
-        {
-            content = value;
-        }
+        get => content;
+        set => content = value;
     }
 
     public void Show()
     {
-        Console.Write("Content: ");
         Console.ForegroundColor = ConsoleColor.Magenta;
-        Console.Write(StringFieldContent);
+        Console.Write("Content: " + StringFieldContent + "; ");
         Console.ResetColor();
-        Console.Write("; ");
     }
 }

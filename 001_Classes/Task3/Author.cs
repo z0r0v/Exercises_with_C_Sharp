@@ -2,26 +2,18 @@ namespace Classes001;
 
 class Author
 {
-    private string? author;
+    private string author = "Have not value";
 
     public string StringFieldAuthor
     {
-        get
-        {
-            return !String.IsNullOrWhiteSpace(author) ? author : "Have not value";
-        }
-        set
-        {
-            author = value;
-        }
+        get => author;
+        set => author = value;
     }
 
     public void Show()
     {
-        Console.Write("Author: ");
         Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.Write(StringFieldAuthor);
+        Console.Write("Author: " + StringFieldAuthor + "; ");
         Console.ResetColor();
-        Console.Write("; ");
     }
 }
