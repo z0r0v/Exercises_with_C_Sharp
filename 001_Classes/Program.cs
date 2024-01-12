@@ -8,6 +8,7 @@ class Program
         Console.WriteLine("AreaPerimeter: 1");
         Console.WriteLine("Book: 2");
         Console.WriteLine("Figure: 3");
+        Console.WriteLine("Address: 4");
         string programNumber = Console.ReadLine() ?? "deffault falue";
 
         if (programNumber == "1")
@@ -32,6 +33,24 @@ class Program
             Point point5 = new("point5", 32, 64);
 
             new Figure(point1, point2, point3, point4, point5).PerimeterCalculator();
+            return;
+        }
+
+        if (programNumber == "4")
+        {
+            Address address = new();
+
+            address.Index = "220115";
+            address.City = "Minsk";
+            address.Street = "str Kizhevatov";
+            address.House = "80";
+            address.Apartment = "78";
+
+            Console.Write(address.Index +
+            " " + address.City +
+            " " + address.Street +
+            " " + address.House +
+            " " + address.Apartment);
             return;
         }
 
