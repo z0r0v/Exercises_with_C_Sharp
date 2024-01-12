@@ -1,5 +1,4 @@
-﻿#nullable disable
-namespace Classes001;
+﻿namespace Classes001;
 
 class Program
 {
@@ -8,7 +7,8 @@ class Program
         Console.WriteLine("Send program number from the list provided");
         Console.WriteLine("AreaPerimeter: 1");
         Console.WriteLine("Book: 2");
-        string programNumber = Console.ReadLine();
+        Console.WriteLine("Figure: 3");
+        string programNumber = Console.ReadLine() ?? "deffault falue";
 
         if (programNumber == "1")
         {
@@ -19,6 +19,19 @@ class Program
         if (programNumber == "2")
         {
             new Book().Show();
+            return;
+        }
+
+
+        if (programNumber == "3")
+        {
+            Point point1 = new("point1", 2, 4);
+            Point point2 = new("point2", 4, 8);
+            Point point3 = new("point3", 8, 16);
+            Point point4 = new("point4", 16, 32);
+            Point point5 = new("point5", 32, 64);
+
+            new Figure(point1, point2, point3, point4, point5).PerimeterCalculator();
             return;
         }
 
