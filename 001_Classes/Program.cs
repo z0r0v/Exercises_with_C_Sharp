@@ -23,7 +23,6 @@ class Program
             return;
         }
 
-
         if (programNumber == "3")
         {
             Point point1 = new("point1", 2, 4);
@@ -31,8 +30,12 @@ class Program
             Point point3 = new("point3", 8, 16);
             Point point4 = new("point4", 16, 32);
             Point point5 = new("point5", 32, 64);
+            // Figure Figure = new(point1, point2);
+            Figure Figure = new(point1, point2, point3);
+            // Figure Figure = new(point1, point2, point3, point4);
+            // Figure Figure = new(point1, point2, point3, point4, point5);
 
-            new Figure(point1, point2, point3, point4, point5).PerimeterCalculator();
+            Console.Write("Figure name: " + Figure.Name + " " + "Perimeter: " + Figure.Perimeter);
             return;
         }
 
