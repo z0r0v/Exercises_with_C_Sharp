@@ -11,22 +11,16 @@ class Program
         // months.ForEach(month => Console.WriteLine(month.Name + " " + month.Days));
         // Console.WriteLine(new Months().GetTheMonthBySerialNumber(3).IndexNumber);
         // Task3
-        Citizen Citizen = new Citizen();
-        Citizen.SetCitizen("1P1", Citizen.CitizenType.Pensioner);
-        Citizen.SetCitizen("1S1", Citizen.CitizenType.Student);
-        Citizen.SetCitizen("1W1", Citizen.CitizenType.Worker);
-        Citizen.SetCitizen("2P2", Citizen.CitizenType.Pensioner);
-        Citizen.SetCitizen("1P1", Citizen.CitizenType.Pensioner);
-        Citizen.SetCitizen("1W1", Citizen.CitizenType.Worker);
-
-        List<Citizen> citizens = Citizen.Citizens;
-        Console.WriteLine("");
-        Console.WriteLine("Citizens:");
-        citizens.ForEach(citizen =>
+        Citizens Citizens = new();
+        Citizens.SetCitizen(new Pensioner("1P1"));
+        Citizens.SetCitizen(new Worker("2W2"));
+        Citizens.SetCitizen(new Pensioner("2P2"));
+        Citizens.SetCitizen(new Student("2S2"));
+        Citizens.CitizensList.ForEach(citizen =>
         {
-            Console.WriteLine("IndexNumber: " + citizen.IndexNumber);
             Console.WriteLine("Type: " + citizen.Type);
             Console.WriteLine("PasportNumber: " + citizen.PasportNumber);
+            Console.WriteLine("");
         });
     }
 }
