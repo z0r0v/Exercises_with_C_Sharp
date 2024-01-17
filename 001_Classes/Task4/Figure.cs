@@ -2,37 +2,22 @@ namespace Classes001;
 
 class Figure
 {
-    private readonly Point _A;
-    private readonly Point _B;
-    private readonly Point _C;
-    private readonly Point _D;
-    private readonly Point _E;
-    public string Name { get; set; } = string.Empty;
-    public double Perimeter { get; set; } = 0;
-    public Figure(Point A, Point B)
+    public Figure(Point A, Point B, Point? C = default, Point? D = default, Point? E = default)
     {
         _A = A;
         _B = B;
-        PerimeterCalculator();
-    }
-
-    public Figure(Point A, Point B, Point C) : this(A, B)
-    {
         _C = C;
-        PerimeterCalculator();
-    }
-
-    public Figure(Point A, Point B, Point C, Point D) : this(A, B, C)
-    {
         _D = D;
-        PerimeterCalculator();
-    }
-
-    public Figure(Point A, Point B, Point C, Point D, Point E) : this(A, B, C, D)
-    {
         _E = E;
         PerimeterCalculator();
     }
+    private readonly Point _A;
+    private readonly Point _B;
+    private readonly Point? _C;
+    private readonly Point? _D;
+    private readonly Point? _E;
+    public string Name { get; set; } = string.Empty;
+    public double Perimeter { get; set; } = 0;
 
     private double LengthSide(Point A, Point B)
     {
